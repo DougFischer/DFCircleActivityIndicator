@@ -46,7 +46,7 @@ To install `DFCircleActivityIndicator`, just drag and drop the .h and .m files i
     [circleIndicator4 startAnimation];
 ```
 
-It may need QuartzCore framework.
+It must need QuartzCore framework. May looks 'slow' or 'flicking' on iOS Simulator, but works fine on device, even on iPhone 4.
 
 ##Development
 
