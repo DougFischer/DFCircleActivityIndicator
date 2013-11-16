@@ -8,6 +8,7 @@
     
     //Standard
     DFCircleActivityIndicator *circleIndicator1 = [[DFCircleActivityIndicator alloc] initWithFrame:CGRectMake(30, 50, 100, 100)];
+    circleIndicator1.emptySize = 0.4f;
     [self.view addSubview:circleIndicator1];
     [circleIndicator1 startAnimation];
     
@@ -18,11 +19,12 @@
     [self.view addSubview:circleIndicator2];
     [circleIndicator2 startAnimation];
     
-    //Custom line width and empty size
+    //Custom line width, empty size and speed (rotation duration)
     DFCircleActivityIndicator *circleIndicator3 = [[DFCircleActivityIndicator alloc] initWithFrame:CGRectMake(40, 270, 80, 80)];
     circleIndicator3.lineColor = [UIColor blueColor];
     circleIndicator3.lineWidth = 5.0f;
-    circleIndicator3.emptySize = 0.3f;
+    circleIndicator3.emptySize = 0.4f;
+    circleIndicator3.rotationDuration = 0.5f;
     [self.view addSubview:circleIndicator3];
     [circleIndicator3 startAnimation];
     
@@ -31,6 +33,7 @@
     circleIndicator4.lineColor = [UIColor orangeColor];
     circleIndicator4.lineWidth = 20.0f;
     circleIndicator4.emptySize = 0.02f;
+    circleIndicator4.rotationDuration = 2.0f;
     [self.view addSubview:circleIndicator4];
     [circleIndicator4 startAnimation];
 }

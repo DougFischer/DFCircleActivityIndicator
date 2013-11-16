@@ -40,6 +40,7 @@
 
 - (void)initDefaults {
     _lineColor = [UIColor greenColor];
+    _rotationDuration = 1.0f;
     _lineWidth = 15.0f;
     _lineAlpha = 0.50f;
     _emptySize = 0.20f;
@@ -95,7 +96,7 @@
 #pragma mark Animation Handling
 
 - (void)rotateWithOptions:(UIViewAnimationOptions)options {
-    [UIView animateWithDuration:0.45f delay:0.0f options:options
+    [UIView animateWithDuration:_rotationDuration / 4.0f delay:0.0f options:options
     animations: ^{
         self.transform = CGAffineTransformRotate(self.transform, M_PI / 2);
     }
@@ -126,6 +127,11 @@
 
 - (void)setEmptySize:(CGFloat)emptySize {
     _emptySize = emptySize;
+    [self setNeedsLayout];
+}
+
+- (void)setRotationDuration:(CGFloat)rotationDuration {
+    _rotationDuration = MAX(0.01f, rotationDuration);
     [self setNeedsLayout];
 }
 
