@@ -51,3 +51,7 @@ It must need QuartzCore framework. May looks 'slow' or 'flicking' on iOS Simulat
 ##Development
 
 You're welcome to make improvements.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/DougFischer/dfcircleactivityindicator/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
